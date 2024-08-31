@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Readex Pro", sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #08B2FF 60%, #FFFFFF 100%); /* Ajustando a intensidade das cores */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 30px 40px;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #08B2FF;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #08B2FF;
+    }
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-container input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 20px 45px 20px 20px;
+    transition: border 0.3s ease;
+}
+
+.input-container input:focus {
+    border: 2px solid #08B2FF;
+}
+
+.input-container input::placeholder {
+    color: #FFFFFF;
+}
+
+.input-container a {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.input-container a:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    width: 100%;
+    height: 50px;
+    background-color: #08B2FF;
+    border: none;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-weight: 900;
+    margin-top: 24px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease;
+}
+
+.submit-button:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.register-link {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.register-link p {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+.register-link p a {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.submit-button.loading {
+    position: relative;
+    pointer-events: none;
+    color: transparent;
+}
+
+.submit-button.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-container input {
+    width: 100%; /* Ajuste a largura para acomodar o novo ícone */
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 20px 45px 20px 20px;
+    transition: border 0.3s ease;
+}
+
+.input-container img {
+    position: absolute;
+    right: 24px;
+    top: 20%;
+    margin-top: 5px;
+    cursor: pointer; /* Adicione isso para tornar o ícone clicável */
+}
+
+.input-container img#toggle-password {
+    right: 25px; /* Posicione o ícone de visibilidade da senha */
+}
+
+.input-container a {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.input-container a:hover {
+    text-decoration: underline;
+}
+
+.pendulum {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+h1:hover .pendulum {
+    animation: pendulum-swing 1s infinite;
+}
+
+@keyframes pendulum-swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fade-out 2.5s forwards;
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}

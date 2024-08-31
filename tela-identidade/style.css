@@ -1,0 +1,313 @@
+/* Estilo do Grid */ 
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+.retangulo1, .retangulo2 {
+    width: 100%;
+    height: 550px;
+    padding: 50px;
+    border: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.retangulo11, .retangulo22 {
+    width: 100%;
+    height: 600px;
+    padding: 50px;
+    border: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.identidade {
+    width: 100%;
+    height: 900px;
+    border: none;
+    background: linear-gradient(to right, #08B2FF, #F0FBFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Espaçamento entre os quadrados, opcional */
+}
+
+.retangulo-identidade {
+    border-radius: 2vw; /* Proporção responsiva para o border-radius */
+    width: 20vw; /* Largura responsiva em relação à largura da viewport */
+    height: 60vh; /* Altura responsiva em relação à altura da viewport */
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.retangulo-identidade img {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.retangulo1 h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.retangulo1 p {
+    text-align: center;
+    margin: 0;
+    font-size: larger;
+}
+
+.retangulo1 {
+    background-color: #08B2FF;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.retangulo11 h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.retangulo11 p {
+    text-align: center;
+    margin: 0;
+}
+
+.retangulo11 {
+    background-color: #08B2FF;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.light {
+    background-color: #F0FBFF;
+    color: #08B2FF;
+}
+
+.retangulo2 {
+    background-color: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.retangulo22 {
+    background-color: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.retangulo2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0px;
+    margin: 0%;
+}
+
+/* Outros estilos mantidos */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Readex Pro", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.user-icon img, .menu-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 125px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #00aaff;
+    font-weight: 350;
+}
+
+.nav-menu a.logo {
+    font-size: 1.5em;
+    color: #00aaff;
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: #00aaff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+
+/*Estilo das opções visíveis no cabeçalho */
+.nav-menu a:hover {
+    color: #08B2FF;; /* Cor do texto ao passar o mouse */
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.5); /* Brilho na escrita */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Estilo do dropdown */
+.dropdown-content a:hover {
+    background-color: #08B2FF; /* Cor de fundo ao passar o mouse */
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.5); /* Brilho na escrita */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilo do dropdown principal */
+.menu-icon .dropdown-content.principal {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 200px;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.menu-icon .dropdown-content.principal .dropdown-group {
+    margin-bottom: 15px;
+}
+
+.menu-icon .dropdown-content.principal .dropdown-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00aaff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.menu-icon .dropdown-content.principal a {
+    font-size: 14px;
+    color: #00aaff;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.menu-icon:hover .dropdown-content.principal {
+    display: block;
+}
+
+.menu-icon .dropdown-content.principal a:hover {
+    background-color: #08B2FF;
+    color: white;
+}
+
+/* Animação */
+.animation {
+    grid-column: 1 / -1;
+    background: #FFFFFF;
+    width: 110%;
+    height: 70px;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 22px;
+    color: #08B2FF;
+    animation: scroll-left 1800s linear infinite;
+    user-select: none;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Jump Animation */
+.jump:hover {
+    animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
