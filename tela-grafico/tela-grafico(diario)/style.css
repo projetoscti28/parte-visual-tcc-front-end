@@ -1,0 +1,181 @@
+body {
+    font-family: "Readex Pro", sans-serif;
+    background: linear-gradient(to bottom, 
+    #0099E0 0%, 
+    #0AB1FF 10%, 
+    #33BEFF 20%, 
+    #5CCBFF 30%, 
+    #85D8FF 40%, 
+    #00A7F5 50%, 
+    #1FB8FF 60%, 
+    #47C5FF 70%, 
+    #ADE5FF 80%, 
+    #D6F2FF 90%, 
+    #0AB1FF 100%);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #08B2FF;
+    margin: 10px;
+}
+
+.left-panel {
+    width: 250px;
+    margin-right: 30px;
+    /*background-color: transparent;*/
+}
+
+.right-panel {
+    width: 600px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.temperature-summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.max-temp, .min-temp {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #08B2FF;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-size: 0.7em;
+    width: 100px;
+    text-align: center;
+    margin: 5%;
+    font-weight: bold;
+}
+
+.right-side{
+    text-align: right;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.location {
+    font-size: 18;
+    margin-bottom: 20px;
+}
+
+.current-temperature {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.conditions {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    height: 80%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+}
+
+th {
+    background-color: #f5f5f5;
+}
+
+.font-table-color{
+    color: #08B2FF;
+
+}
+
+.see-more {
+    text-align: center;
+    color: #08B2FF;
+    cursor: pointer;
+}
+
+.colegio{
+    font-size: 40;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.daily{
+    padding: 5px 5px;
+    border-radius: 50px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    width: 100px;
+    text-align: center;
+}
+
+.weekly{
+    padding: 5px 5px;
+    border-radius: 50px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    width: 100px;
+    text-align: center;
+}
+
+button.daily{
+    background: linear-gradient(to right, #333, #00A4E8); /* Gradiente de preto para azul */
+    color: white;
+    border-radius: 20px; /* Bordas arredondadas */
+}
+
+button.weekly {
+    background: linear-gradient(to right, #333, #00A4E8); /* Gradiente de preto para azul */
+    color: white;
+    border-radius: 20px; /* Bordas arredondadas */
+    
+}
+
+.img{
+    height: 250px;
+    width: 450px;
+}
+
+
+
+
