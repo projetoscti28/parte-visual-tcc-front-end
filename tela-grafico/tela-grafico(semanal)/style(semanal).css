@@ -24,6 +24,17 @@ body {
 }
 
 .container {
+    width: 550px;
+    height: 550px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #08B2FF;
+    margin: 10px;
+}
+
+.container2 {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -33,14 +44,15 @@ body {
 }
 
 .left-panel {
-    width: 250px;
+    width: 350px;
     margin-right: 30px;
+    /*background-color: transparent;*/
 }
 
 .right-panel {
     width: 600px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .temperature-summary {
@@ -70,6 +82,7 @@ body {
 h1 {
     font-size: 2em;
     margin-bottom: 5px;
+  
 }
 
 h2 {
@@ -105,16 +118,20 @@ table {
 th, td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f1eeee56;
     font-size: 1.1em;
 }
 
+
 th {
-    background-color: #f5f5f5;
+    background-color: #14a5ff00;
+    text-align: center;
 }
 
 .font-table-color{
-    color: #08B2FF;
+    width: 300px;
+    color: #098afa;
+
 }
 
 .see-more {
@@ -132,20 +149,13 @@ th {
     justify-content: space-between;
 }
 
+
 button {
     color: white;
     border: none;
     cursor: pointer;
 }
 
-.daily{
-    padding: 5px 5px;
-    border-radius: 50px;
-    border-radius: 10px;
-    font-size: 0.8em;
-    width: 100px;
-    text-align: center;
-}
 
 .weekly{
     padding: 5px 5px;
@@ -157,9 +167,16 @@ button {
 }
 
 button.daily{
-    background: linear-gradient(to right, #333, #00A4E8); /* Gradiente de preto para azul */
-    color: white;
-    border-radius: 20px; /* Bordas arredondadas */
+    background:
+    linear-gradient(#FFFFFF 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to right, #333, #00A4E8) border-box;
+    color: #313149;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+
 }
 
 button.weekly {
