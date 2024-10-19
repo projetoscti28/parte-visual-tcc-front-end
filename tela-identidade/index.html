@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- Definindo a codificação de caracteres e a responsividade da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importa a folha de estilo externa -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Título da página -->
     <title>Equipe Atmos Vision</title>
+
+    <!-- Pré-conectando ao Google Fonts para melhorar o carregamento da fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importando a fonte Readex Pro do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Cabeçalho -->
+    <!-- Cabeçalho da página -->
     <header class="header">
+        <!-- Ícone do menu com dropdown -->
         <div class="menu-icon">
             <img src="images/menu_icon.png" alt="Menu">
+
+            <!-- Dropdown principal do menu -->
             <div class="dropdown-content principal">
+                <!-- Grupo de links relacionados ao clima -->
                 <div class="dropdown-group">
                     <span class="dropdown-title">Clima</span>
                     <a href="#">Previsão do Tempo</a>
                     <a href="#">Mapas Climáticos</a>
                 </div>
+                <!-- Grupo de links relacionados à página inicial -->
                 <div class="dropdown-group">
                     <span class="dropdown-title">Home</span>
                     <a href="#">Sobre</a>
                     <a href="#">Contato</a>
                 </div>
+                <!-- Grupo de links relacionados ao cadastro -->
                 <div class="dropdown-group">
                     <span class="dropdown-title">Cadastro</span>
                     <a href="#">Novo Usuário</a>
                     <a href="#">Login</a>
                 </div>
+                <!-- Grupo de links relacionados aos gráficos -->
                 <div class="dropdown-group">
                     <span class="dropdown-title">Gráficos</span>
                     <a href="#">Temperatura</a>
@@ -37,6 +55,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Menu de navegação -->
         <nav class="nav-menu">
             <div class="dropdown">
                 <a href="#">Clima</a>
@@ -52,7 +72,7 @@
                     <a href="#">Contato</a>
                 </div>
             </div>
-            <a href="#" class="logo">atmovision</a>
+            <a href="#" class="logo">atmovision</a> <!-- Logo central no menu -->
             <div class="dropdown">
                 <a href="#">Cadastro</a>
                 <div class="dropdown-content">
@@ -68,34 +88,38 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Ícone do usuário no cabeçalho -->
         <div class="user-icon">
             <img src="images/user_icon.png" alt="Conta">
         </div>
     </header>
 
-    <!-- Primeira Seção -->
+    <!-- Primeira seção com texto e imagem -->
     <div class="grid-layout">
+        <!-- Texto de apresentação do projeto -->
         <div class="retangulo11">
             <h1 class="jump">Atm Vision Project</h1>
             <p>
                 Uma torre metelógica construída com harduíno e com um site mostrando em tempo real os resultados obtidos pela torre.
             </p>
         </div>
+        <!-- Imagem relacionada ao projeto -->
         <div class="retangulo22">
             <img src="images/img_project.jpg" alt="Project Photo">
         </div>
     </div>
 
-    <!-- Animação 1-->
+    <!-- Animação de texto em loop horizontal -->
     <div class="animation">
         <div class="scroll-wrapper">
             <div class="scroll-text">- atmos vision - atmos vision - atmos vision - atmos vision - atmos vision - atmos vision </div>
         </div>
     </div>
 
-    <!-- Segunda Seção -->
+    <!-- Segunda seção com equipe e imagens -->
     <div class="grid-layout">
-        <!-- The Team -->
+        <!-- Seção da equipe com imagem e descrição -->
         <div class="retangulo2">
             <img src="images/img_team.jpg" alt="Team Photo">
         </div>
@@ -106,7 +130,7 @@
             </p>
         </div>
 
-        <!-- Project Manager -->
+        <!-- Descrição do orientador do projeto -->
         <div class="retangulo1">
             <h1 class="jump">Orientador Atm Vizion</h1>
             <p>
@@ -117,7 +141,7 @@
             <img src="images/team_folder/img_andre.jpg" alt="Team Photo">
         </div>
 
-        <!-- UX/UI Designer -->
+        <!-- Seção do Product Owner -->
         <div class="retangulo2">
             <img src="images/team_folder/img_matheus.jpg" alt="Team Photo">
         </div>
@@ -128,7 +152,7 @@
             </p>
         </div>
 
-        <!-- Developer Manager -->
+        <!-- Seção do Designer de Interface -->
         <div class="retangulo1">
             <h1 class="jump">Designer Interface</h1>
             <p>
@@ -139,8 +163,7 @@
             <img src="images/team_folder/img_ellen.jpg" alt="Team Photo">
         </div>
 
-
-        <!-- Animação 2-->
+        <!-- Segunda animação com scroll de texto -->
         <div class="animation">
             <div class="scroll-wrapper">
                 <div class="scroll-text">- atmos vizion - atmos vizion - atmos vizion - atmos vizion - atmos vizion - atmos vizion </div>
@@ -148,7 +171,7 @@
         </div>
     </div>
 
-    <!-- Identificação -->
+    <!-- Seção de identificação visual -->
     <div class="identidade">
         <div class="retangulo-identidade"></div>
         <div class="retangulo-identidade"></div>
@@ -156,6 +179,8 @@
         <div class="retangulo-identidade"></div>        
     </div>
 
+    <!-- Link para o arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
+
 </html>
