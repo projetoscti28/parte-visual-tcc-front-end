@@ -1,144 +1,149 @@
+/* Estilo do corpo da página */
 body {
-    background: linear-gradient(to bottom, #08B2FF 60%, #FFFFFF 100%);
+    background: linear-gradient(to bottom, #08B2FF 60%, #FFFFFF 100%); /* Gradiente de fundo */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: "Readex Pro", sans-serif;
-    overflow: hidden;
-    position: relative;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* A altura mínima é a altura da tela */
+    font-family: "Readex Pro", sans-serif; /* Define a fonte */
+    overflow: hidden; /* Remove a barra de rolagem */
+    position: relative; /* Necessário para elementos posicionados de forma absoluta */
 }
 
+/* Remove o sublinhado de todos os links */
 a {
     text-decoration: none;
 }
 
+/* Contêiner centralizado */
 .container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    user-select: none; /* Desativa a seleção de texto */
 }
 
+/* Estilo centralizado para o conteúdo da página */
 .content {
     text-align: center;
 }
 
+/* Estilo do título principal */
 h1 {
-    color: white;
-    font-size: 48px;
-    margin-bottom: 1rem;
+    color: white; /* Cor branca para o texto */
+    font-size: 48px; /* Tamanho da fonte */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
 }
 
+/* Estilo da logo */
 .logo {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    margin: 2rem auto;
+    width: 200px; /* Largura da imagem */
+    height: 200px; /* Altura da imagem */
+    border-radius: 10px; /* Arredondamento das bordas */
+    margin: 2rem auto; /* Espaçamento em volta da logo */
 }
 
+/* Layout dos botões de login e cadastro */
 .layout-button {
     display: grid;
-    grid-template-rows: auto auto auto;
-    justify-content: center;
+    grid-template-rows: auto auto auto; /* Disposição dos elementos em linhas */
+    justify-content: center; /* Centraliza os botões horizontalmente */
 }
 
+/* Estilo base dos botões */
 .button {
-    width: 200px;
-    padding: 0.5rem 0;
-    border-radius: 20px;
-    font-size: 1rem;
-    margin: 1rem 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    background-color: #08B2FF;
-    color: #FFFFFF;
+    width: 200px; /* Largura fixa dos botões */
+    padding: 0.5rem 0; /* Espaçamento interno */
+    border-radius: 20px; /* Arredonda os cantos dos botões */
+    font-size: 1rem; /* Tamanho da fonte */
+    margin: 1rem 0; /* Margem entre os botões */
+    cursor: pointer; /* Alteração do cursor ao passar por cima */
+    transition: all 0.3s ease; /* Transição suave em hover */
+    border: 2px solid transparent; /* Sem borda visível inicialmente */
+    background-color: #08B2FF; /* Cor de fundo azul */
+    color: #FFFFFF; /* Cor do texto branca */
     position: relative;
-    z-index: 1;
-    font-family: "Readex Pro", sans-serif; /* Adicionado aqui */
+    z-index: 1; /* Define a camada dos botões */
 }
 
+/* Removendo borda de foco padrão dos botões */
 .button:focus {
     outline: none;
 }
 
+/* Estilo do botão de login ao passar o mouse */
 .login:hover {
-    background-color: transparent;
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    background-color: transparent; /* Fundo transparente */
+    color: #FFFFFF; /* Mantém o texto branco */
+    border: 2px solid #FFFFFF; /* Adiciona borda branca */
 }
 
+/* Estilo do botão de cadastro ao passar o mouse */
 .register:hover {
-    background-color: #FFFFFF;
-    color: #08B2FF;
-    border: 2px solid #FFFFFF;
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #08B2FF; /* Texto azul */
+    border: 2px solid #FFFFFF; /* Borda branca */
 }
 
+/* Estilo do link para retornar à página principal */
 .return-link {
-    color: #FFFFFF;
+    color: #FFFFFF; /* Texto branco */
     cursor: pointer;
-    display: inline-block;
-    transition: transform 0.3s ease;
-    font-family: "Readex Pro", sans-serif; /* Adicionado aqui */
+    display: inline-block; /* Permite o uso de margin e padding */
+    transition: transform 0.3s ease; /* Suave efeito de transformação */
 }
 
+/* Animação de pulo ao passar o mouse no link de retorno */
 .return-link:hover {
     animation: jump 0.5s infinite alternate;
 }
 
+/* Definindo a animação de pulo */
 @keyframes jump {
     0% {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-10px);
+        transform: translateY(-10px); /* Pula 10px para cima */
     }
 }
 
+/* Animação de pêndulo no título */
 .pendulum {
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
+/* Animação de balanço do ponto de exclamação ao passar o mouse */
 h1:hover .pendulum {
     animation: pendulum-swing 1s infinite;
 }
 
+/* Definindo a animação de balanço */
 @keyframes pendulum-swing {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(15deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    75% {
-        transform: rotate(-15deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
 }
 
+/* Estilo dos rastros que aparecem com o movimento do mouse */
 .trail {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: fade-out 2.5s forwards;
+    background-color: #FFFFFF; /* Cor branca */
+    border-radius: 50%; /* Torna os rastros circulares */
+    pointer-events: none; /* O rastro não interfere nas interações do usuário */
+    animation: fade-out 2.5s forwards; /* Animação para sumir gradualmente */
 }
 
+/* Definindo a animação de desaparecimento */
 @keyframes fade-out {
     to {
-        opacity: 0;
+        opacity: 0; /* Faz o rastro desaparecer */
     }
 }
