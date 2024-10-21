@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>12Tela de Login</title>
-        <link rel="stylesheet" href="style.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <form id="login-form">
-                <h1>Bem vindo novamente<span class="pendulum">!</span></h1>
-                <div class="input-container">
-                    <input id="email" placeholder="Email" type="email" required>
-                    <img width="20" height="20" src="images/user_icon.png" alt="User Icon"/>
-                </div>
 
-                <div class="input-container">
-                    <input id="password" placeholder="Senha" type="password" required>
-                    <img id="toggle-password" width="20" height="20" src="images/show_password_icon.png" alt="Toggle Password Visibility" />
-                    <a href="#" class="lost">Esqueci minha senha</a>
-                </div>
+<head>
+    <!-- Define a codificação de caracteres e as configurações de visualização responsiva -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12Tela de Login</title>
 
-                <button type="submit" class="submit-button">Entrar</button>
+    <!-- Importa a folha de estilo externa -->
+    <link rel="stylesheet" href="style.css">
 
-                <div class="register-link">
-                    <p>Não está cadastrado ? <a href="#">Cadastrar</a></p>
-                </div>
+    <!-- Importa a fonte Readex Pro do Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+    </style>
+</head>
 
-            </form>
-        </div>
-        <script src="script.js"></script>
-    </body>
+<body>
+    <!-- Contêiner principal para centralizar o conteúdo -->
+    <div class="container">
+        <!-- Formulário de login com id 'login-form' -->
+        <form id="login-form">
+            <!-- Título do formulário com animação no ponto de exclamação -->
+            <h1>Bem vindo novamente<span class="pendulum">!</span></h1>
+
+            <!-- Campo de entrada de email -->
+            <div class="input-container">
+                <input id="email" placeholder="Email" type="email" required>
+                <!-- Ícone de usuário ao lado do campo de email -->
+                <img width="20" height="20" src="images/user_icon.png" alt="User Icon" />
+            </div>
+
+            <!-- Campo de entrada de senha com botão para alternar visibilidade -->
+            <div class="input-container">
+                <input id="password" placeholder="Senha" type="password" required>
+                <img id="toggle-password" width="20" height="20" src="images/show_password_icon.png" alt="Toggle Password Visibility" />
+                <!-- Link para recuperação de senha -->
+                <a href="#" class="lost">Esqueci minha senha</a>
+            </div>
+
+            <!-- Botão para enviar o formulário de login -->
+            <button type="submit" class="submit-button">Entrar</button>
+
+            <!-- Link para redirecionar para a página de cadastro -->
+            <div class="register-link">
+                <p>Não está cadastrado ? <a href="#">Cadastrar</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Script JavaScript externo para manipulação do formulário -->
+    <script src="script.js"></script>
+</body>
+
 </html>

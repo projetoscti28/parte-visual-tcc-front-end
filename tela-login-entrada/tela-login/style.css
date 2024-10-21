@@ -1,3 +1,4 @@
+/* Reseta a margem e o padding de todos os elementos, define o sistema de caixa para incluir bordas e padding na largura e altura, e define a fonte padrão */
 * {
     margin: 0;
     padding: 0;
@@ -5,142 +6,152 @@
     font-family: "Readex Pro", sans-serif;
 }
 
+/* Estilos do corpo da página */
 body {
-    background: linear-gradient(to bottom, #08B2FF 60%, #FFFFFF 100%); /* Ajustando a intensidade das cores */
+    background: linear-gradient(to bottom, #08B2FF 60%, #FFFFFF 100%); /* Fundo com gradiente do azul ao branco */
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Define altura mínima da tela inteira */
     display: flex;
     align-items: center;
-    justify-content: center;
-    animation: fadeIn 2s ease-in-out;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    justify-content: center; /* Centraliza o conteúdo na página */
+    animation: fadeIn 2s ease-in-out; /* Animação de aparecimento suave */
+    user-select: none; /* Desativa a seleção de texto */
 }
 
+/* Animação de fade-in para a página */
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
+/* Contêiner principal do formulário */
 .container {
     width: 420px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    padding: 30px 40px;
-    animation: slideIn 1s ease-out;
+    background: rgba(255, 255, 255, 0.1); /* Fundo branco transparente */
+    border: 2px solid rgba(255, 255, 255, .2); /* Borda levemente visível */
+    backdrop-filter: blur(20px); /* Efeito de desfoque no fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 30px 40px; /* Espaçamento interno */
+    animation: slideIn 1s ease-out; /* Animação de deslizamento ao aparecer */
 }
 
+/* Animação de deslizamento do contêiner */
 @keyframes slideIn {
     from {
-        transform: translateY(-50px);
-        opacity: 0;
+        transform: translateY(-50px); /* Começa deslocado para cima */
+        opacity: 0; /* Invisível no início */
     }
-
     to {
-        transform: translateY(0);
-        opacity: 1;
+        transform: translateY(0); /* Move para a posição original */
+        opacity: 1; /* Torna visível */
     }
 }
 
+/* Estilos para o título principal */
 h1 {
     font-size: 36px;
     text-align: center;
     color: #FFFFFF;
-    animation: textGlow 2s ease-in-out infinite;
+    animation: textGlow 2s ease-in-out infinite; /* Animação de brilho no texto */
 }
 
+/* Animação de brilho no texto */
 @keyframes textGlow {
-    0%,
-    100% {
+    0%, 100% {
         text-shadow: 0 0 10px #08B2FF;
     }
-
     50% {
         text-shadow: 0 0 20px #08B2FF;
     }
 }
 
+/* Estilos para o contêiner dos campos de entrada */
 .input-container {
-    position: relative;
+    position: relative; /* Para posicionar o ícone dentro do campo */
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
 
+/* Estilos dos campos de entrada de texto */
 .input-container input {
     width: 100%;
     height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 50px;
+    background: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda padrão */
+    outline: none; /* Remove o contorno ao focar */
+    border: 2px solid rgba(255, 255, 255, .2); /* Borda levemente visível */
+    border-radius: 50px; /* Bordas arredondadas */
     font-size: 16px;
     color: #FFFFFF;
-    padding: 20px 45px 20px 20px;
-    transition: border 0.3s ease;
+    padding: 20px 45px 20px 20px; /* Espaçamento interno, ajustado para ícone */
+    transition: border 0.3s ease; /* Transição suave na mudança de borda */
 }
 
+/* Efeito ao focar no campo de texto */
 .input-container input:focus {
-    border: 2px solid #08B2FF;
+    border: 2px solid #08B2FF; /* Borda azul ao focar */
 }
 
+/* Estilos do placeholder */
 .input-container input::placeholder {
-    color: #FFFFFF;
+    color: #FFFFFF; /* Placeholder branco */
 }
 
+/* Estilo dos links dentro do contêiner de input */
 .input-container a {
     font-size: 16px;
     margin-top: 5px;
     color: #FFFFFF;
-    text-decoration: none;
+    text-decoration: none; /* Remove sublinhado */
 }
 
+/* Efeito ao passar o mouse sobre o link */
 .input-container a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
 
+/* Estilo do botão de envio */
 .submit-button {
     width: 100%;
     height: 50px;
-    background-color: #08B2FF;
+    background-color: #08B2FF; /* Fundo azul */
     border: none;
     border-radius: 50px;
     color: #FFFFFF;
     font-weight: 900;
     margin-top: 24px;
     cursor: pointer;
-    outline: none;
     font-size: 16px;
-    transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease;
+    transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease; /* Transição suave */
 }
 
+/* Efeito ao passar o mouse sobre o botão */
 .submit-button:hover {
-    background-color: transparent;
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    background-color: transparent; /* Fundo transparente */
+    color: #FFFFFF; /* Texto branco */
+    border: 2px solid #FFFFFF; /* Borda branca */
 }
 
+/* Estilo para o link de registro */
 .register-link {
     text-align: center;
     margin: 20px 0;
 }
 
+/* Estilos para o texto do link de registro */
 .register-link p {
     font-size: 16px;
     color: #FFFFFF;
-    font-weight: 100;
+    font-weight: 100; /* Peso de fonte leve */
 }
 
+/* Estilos do link dentro do parágrafo de registro */
 .register-link p a {
     font-size: 16px;
     color: #FFFFFF;
@@ -148,26 +159,29 @@ h1 {
     text-decoration: none;
 }
 
+/* Efeito ao passar o mouse sobre o link de registro */
 .register-link p a:hover {
     text-decoration: underline;
 }
 
+/* Animação de rotação para o botão de envio em estado de carregamento */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
 }
 
+/* Estilo do botão de envio em estado de carregamento */
 .submit-button.loading {
     position: relative;
-    pointer-events: none;
-    color: transparent;
+    pointer-events: none; /* Desativa a interação com o botão */
+    color: transparent; /* Torna o texto invisível */
 }
 
+/* Animação de carregamento do botão de envio */
 .submit-button.loading::after {
     content: "";
     position: absolute;
@@ -179,62 +193,30 @@ h1 {
     border: 3px solid rgba(255, 255, 255, 0.2);
     border-top-color: #ffffff;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite; /* Animação de rotação */
 }
 
-.input-container {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-}
-
-.input-container input {
-    width: 100%; /* Ajuste a largura para acomodar o novo ícone */
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 50px;
-    font-size: 16px;
-    color: #FFFFFF;
-    padding: 20px 45px 20px 20px;
-    transition: border 0.3s ease;
-}
-
+/* Estilo do ícone dentro do campo de entrada */
 .input-container img {
     position: absolute;
-    right: 24px;
+    right: 24px; /* Posiciona o ícone à direita */
     top: 20%;
     margin-top: 5px;
-    cursor: pointer; /* Adicione isso para tornar o ícone clicável */
+    cursor: pointer; /* Torna o ícone clicável */
 }
 
-.input-container img#toggle-password {
-    right: 25px; /* Posicione o ícone de visibilidade da senha */
-}
-
-.input-container a {
-    font-size: 16px;
-    margin-top: 5px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.input-container a:hover {
-    text-decoration: underline;
-}
-
+/* Animação de balanço no ponto de exclamação */
 .pendulum {
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
+/* Animação do ponto de exclamação ao passar o mouse sobre o título */
 h1:hover .pendulum {
     animation: pendulum-swing 1s infinite;
 }
 
+/* Animação de balanço do ponto de exclamação */
 @keyframes pendulum-swing {
     0% {
         transform: rotate(0deg);
@@ -253,6 +235,7 @@ h1:hover .pendulum {
     }
 }
 
+/* Estilo dos rastros de movimento do mouse */
 .trail {
     position: absolute;
     width: 10px;
@@ -260,9 +243,10 @@ h1:hover .pendulum {
     background-color: #FFFFFF;
     border-radius: 50%;
     pointer-events: none;
-    animation: fade-out 2.5s forwards;
+    animation: fade-out 2.5s forwards; /* Animação de desaparecimento */
 }
 
+/* Animação para os rastros sumirem */
 @keyframes fade-out {
     to {
         opacity: 0;
