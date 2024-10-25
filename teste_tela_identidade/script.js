@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const teamMembers = document.querySelectorAll('.team-member');
 
-    // Função para encontrar a altura máxima
+    // Função para igualar a altura dos cards dos membros da equipe
     function equalizeHeights() {
         let maxHeight = 0;
 
-        // Primeiro, calcula a altura máxima
+        // Calcula a altura máxima entre os cards
         teamMembers.forEach(member => {
             let memberHeight = member.offsetHeight;
             if (memberHeight > maxHeight) {
@@ -13,32 +13,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Depois, aplica essa altura a todas as divs
+        // Define a altura de todos os cards para a altura máxima
         teamMembers.forEach(member => {
             member.style.height = `${maxHeight}px`;
         });
     }
     
-    // Executar a função ao carregar a página
+    // Executa a função ao carregar a página
     equalizeHeights();
 
-    // Observador de interseção para aplicar a animação
+    // Observador de interseção para animação ao entrar na viewport
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('appear');
+                entry.target.classList.add('appear'); // Adiciona a classe 'appear'
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.1 // Define o nível de visibilidade para ativar a animação
     });
 
+    // Observa cada membro da equipe
     teamMembers.forEach(member => {
         observer.observe(member);
     });
 
-    // Dropdown
+    // Alterna a visibilidade do menu dropdown ao clicar no ícone de menu
     const menuIcon = document.querySelector('.menu-icon');
     const menuDropdown = document.querySelector('.menu-dropdown');
 
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         menuDropdown.style.display = (menuDropdown.style.display === 'block') ? 'none' : 'block';
     });
 
-    // Interação com movimento do mouse para a div #info
+    // Efeito de fundo animado ao mover o mouse na seção #info
     const infoSection = document.getElementById('info');
 
     infoSection.addEventListener('mousemove', function(e) {
