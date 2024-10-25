@@ -1,3 +1,4 @@
+/* Configuração global para remover margens e padding, definir fonte e sistema de caixa */
 * {
     margin: 0;
     padding: 0;
@@ -5,29 +6,24 @@
     font-family: "Readex Pro", sans-serif;
 }
 
+/* Estilo do corpo da página */
 body {
     background: linear-gradient(to bottom, #08B2FF 60%, #FFFFFF 100%);
-    background-size: cover;
-    background-position: center;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: fadeIn 2s ease-in-out;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
+    user-select: none; /* Desativa a seleção de texto */
 }
 
+/* Animação de fade-in para o corpo */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
+/* Estilo do contêiner principal */
 .container {
     width: 420px;
     background: rgba(255, 255, 255, 0.1);
@@ -35,9 +31,10 @@ body {
     backdrop-filter: blur(20px);
     border-radius: 10px;
     padding: 30px 40px;
-    animation: slideIn 1s ease-out;
+    animation: slideIn 1s ease-out; /* Animação de slide para baixo */
 }
 
+/* Animação de slide-in do contêiner */
 @keyframes slideIn {
     from {
         transform: translateY(-50px);
@@ -49,43 +46,35 @@ body {
     }
 }
 
+/* Estilo do título principal */
 h1 {
     font-size: 36px;
     text-align: center;
     color: #FFFFFF;
-    animation: textGlow 2s ease-in-out infinite;
-    position: relative;
+    animation: textGlow 2s ease-in-out infinite; /* Animação de brilho */
 }
 
+/* Animação de brilho do texto */
 @keyframes textGlow {
-    0%, 100% {
-        text-shadow: 0 0 10px #08B2FF;
-    }
-    50% {
-        text-shadow: 0 0 20px #08B2FF;
-    }
+    0%, 100% { text-shadow: 0 0 10px #08B2FF; }
+    50% { text-shadow: 0 0 20px #08B2FF; }
 }
 
+/* Animação de pontos no título */
 .dots::after {
     content: ".";
-    animation: dotsAnimation 3s steps(5, end) infinite;
+    animation: dotsAnimation 3s steps(5, end) infinite; /* Animação para os pontos */
 }
 
+/* Animação para adicionar pontos após o título */
 @keyframes dotsAnimation {
-    0%, 20% {
-        content: "";
-    }
-    40% {
-        content: ".";
-    }
-    60% {
-        content: "..";
-    }
-    80%, 100% {
-        content: "...";
-    }
+    0%, 20% { content: ""; }
+    40% { content: "."; }
+    60% { content: ".."; }
+    80%, 100% { content: "..."; }
 }
 
+/* Estilos para o contêiner dos campos de entrada */
 .input-container {
     position: relative;
     width: 100%;
@@ -93,6 +82,7 @@ h1 {
     margin: 30px 0;
 }
 
+/* Estilos dos campos de entrada de senha */
 .input-container input {
     width: 100%;
     height: 100%;
@@ -107,14 +97,17 @@ h1 {
     transition: border 0.3s ease;
 }
 
+/* Borda azul ao focar no campo */
 .input-container input:focus {
     border: 2px solid #08B2FF;
 }
 
+/* Placeholder do campo de entrada */
 .input-container input::placeholder {
     color: #FFFFFF;
 }
 
+/* Estilo do ícone dentro do campo de entrada */
 .input-container img {
     position: absolute;
     right: 25px;
@@ -123,6 +116,7 @@ h1 {
     cursor: pointer;
 }
 
+/* Estilo do botão de redefinição de senha */
 .submit-button {
     width: 100%;
     height: 50px;
@@ -133,40 +127,45 @@ h1 {
     font-weight: 900;
     margin-top: 24px;
     cursor: pointer;
-    outline: none;
     font-size: 16px;
     transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease;
 }
 
+/* Estilo do botão ao passar o mouse */
 .submit-button:hover {
     background-color: transparent;
     color: #FFFFFF;
     border: 2px solid #FFFFFF;
 }
 
+/* Estilo do link de retorno */
 .register-link {
     text-align: center;
     margin: 20px 0;
 }
 
+/* Estilo do link de retorno */
 .register-link a {
     font-size: 16px;
     color: #FFFFFF;
     text-decoration: none;
 }
 
+/* Efeito de sublinhado ao passar o mouse */
 .register-link a:hover {
     text-decoration: underline;
 }
 
+/* Estilo das mensagens de erro */
 .error-message {
     color: #FF0000;
     font-size: 14px;
     text-align: center;
     margin-top: 10px;
-    display: none;
+    display: none; /* Invisível por padrão */
 }
 
+/* Animação para rastros do mouse */
 .trail {
     position: absolute;
     width: 10px;
@@ -174,11 +173,10 @@ h1 {
     background-color: #FFFFFF;
     border-radius: 50%;
     pointer-events: none;
-    animation: fade-out 2.5s forwards;
+    animation: fade-out 2.5s forwards; /* Animação de fade-out */
 }
 
+/* Animação de fade-out */
 @keyframes fade-out {
-    to {
-        opacity: 0;
-    }
+    to { opacity: 0; }
 }

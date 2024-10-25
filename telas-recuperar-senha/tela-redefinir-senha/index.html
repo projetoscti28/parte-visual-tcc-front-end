@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- Configuração de codificação de caracteres e responsividade da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir Senha</title>
+
+    <!-- Importa a folha de estilo externa -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Importa a fonte 'Readex Pro' do Google Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
     </style>
 </head>
+
 <body>
+    <!-- Contêiner principal para centralizar o formulário na página -->
     <div class="container">
+        <!-- Formulário de redefinição de senha -->
         <form id="login-form">
+            <!-- Título com animação de pontos -->
             <h1>Redefinindo sua senha<span class="dots"></span></h1>
+
+            <!-- Campo de entrada para nova senha com ícone de visibilidade -->
             <div class="input-container">
                 <input id="new-password" placeholder="Nova senha" type="password" required>
                 <img id="toggle-new-password" width="20" height="20" src="images/show_password_icon.png" alt="Toggle Password Visibility" />
             </div>
+
+            <!-- Campo de entrada para confirmação de senha com ícone de visibilidade -->
             <div class="input-container">
                 <input id="confirm-password" placeholder="Confirme a senha" type="password" required>
                 <img id="toggle-confirm-password" width="20" height="20" src="images/show_password_icon.png" alt="Toggle Password Visibility" />
             </div>
+
+            <!-- Exibe mensagens de erro de validação -->
             <div id="error-message" class="error-message"></div>
+
+            <!-- Botão para redefinir a senha -->
             <button type="submit" class="submit-button">Redefinir</button>
+
+            <!-- Link para retornar à tela principal -->
             <div class="register-link">
                 <a href="#">Voltar para a tela principal</a>
             </div>
         </form>
     </div>
+
+    <!-- Script JavaScript externo -->
     <script src="script.js"></script>
 </body>
+
 </html>
